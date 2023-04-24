@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - lr prints the lowercase alphabet in reverse
+* main - entry point
 * Return: Always 0
 */
 int main(void)
 {
-char l;
-for (lr = 'z'; l >= 'a'; l--)
+char r;
+for (r = 'z'; r >= 'a'; r--)
 {
-putchar(l);
+putchar(r);
 }
 putchar('\n');
 return (0);
