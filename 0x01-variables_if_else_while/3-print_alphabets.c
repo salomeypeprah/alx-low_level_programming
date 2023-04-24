@@ -2,18 +2,21 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - my entry point
+* main - entry point
 *
 * Return: Always 0
 */
-int main(void) {
-char c;
-for (c = 'a'; c <= 'z'; c++) {
-putchar(c);
+int main(void)
+{
+char s;
+for (s = 'a'; s <= 'z'; s++)
+{
+putchar(s);
 }
-for (c = 'A'; c <= 'Z'; c++) {
-putchar(c);
+for (s = 'A'; s <= 'Z'; s++)
+{
+putchar(s);
 }
 putchar('\n');
-return 0;
+return (0);
 }
