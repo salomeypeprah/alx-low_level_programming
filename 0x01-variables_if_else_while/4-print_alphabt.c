@@ -7,10 +7,11 @@
 * Return: Always 0 (Success)
 */
 int main(void)
-{	
-char c;
-for (c = 'a'; c <= 'z'; c++)
-if (c != 'e' && c != 'q')
-putchar(c);
+{
+char l;
+for (l = 'a'; l <= 'z'; l++)
+if (l != 'e' && l != 'q')
+putchar(l);
+	putchar('\n');
 return (0);
 }
