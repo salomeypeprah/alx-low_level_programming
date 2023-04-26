@@ -1,15 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *main -  entry point.
- *Return:0 no error, non zero if error
+ * _abs - computes the absolute value of an integrer
+ *
+ * @n: the int to check
+ *
+ * Return: the absolute value of int
+ *
  */
-int main(void)
+int _abs(int n)
 {
-	int i;
-
-	for (i = '0'; i <= '9'; i++)
-		putchar(i);
-	putchar('\n');
-	return (0);
+	if (n >= 0)
+	{
+		return (n);
+	}
+	return (-n);
 }
-
