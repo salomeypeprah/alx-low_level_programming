@@ -1,12 +1,12 @@
 #include "main.h"
 /**
  * muliply -a function that multiplies 2 int
- * @v: first int
+ * @a: first int
  * @b: second int
- * Return: addition of the multiplicattion
+ * Return: the results for a * b
  */
 
-int mul(int v, int b)
+int mul(int a, int b)
 {
-	return (v * b);
+	return (a * b);
 }
