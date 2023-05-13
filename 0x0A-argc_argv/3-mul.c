@@ -9,42 +9,43 @@
  */
 int _atoi(char *s)
 {
-	int p, d, n, ans, z, num;
+	int i, d, n, len, f, digit;
 
-	p = 0;
+	i = 0;
 	d = 0;
 	n = 0;
-	ans = 0;
-	z = 0;
-	num = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-	while (s[ans] != '\0')
-		ans++;
+	while (s[len] != '\0')
+		len++;
 
-	while (p < ans && z == 0)
+	while (i < len && f == 0)
 	{
-		if (s[p] == '-')
+		if (s[i] == '-')
 			++d;
 
-		if (s[p] >= '0' && s[p] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			num = s[p] - '0';
+			digit = s[i] - '0';
 			if (d % 2)
-				num = -num;
-			n = n * 10 + num;
-			num = 1;
-			if (s[p + 1] < '0' || s[p + 1] > '9')
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
-			z = 0;
+			f = 0;
 		}
-		p++;
+		i++;
 	}
 
-	if (z == 0)
+	if (f == 0)
 		return (0);
 
 	return (n);
 }
+
 /**
  * main - multiplies two numbers
  * @argc: number of arguments
