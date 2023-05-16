@@ -6,17 +6,17 @@
  * @grid: 2 dimension grid
  * @height: height dimension of grid
  * Description: free memory of grid
- * Return: 0
+ * Return: nothing
  */
 void free_grid(int **grid, int height)
 {
-int k = 0
+int kk = 0;
 
-	for (; k < height; k++)
+if (grid == NULL || height == 0)
+return;
+	for (; kk < height; kk++)
+		free(grid[kk]);
 
-	}
-		free(grid[k])
-	}
 
 	free(grid);
 }
