@@ -10,11 +10,12 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *response
-	unsigned int k = 0;
-		    kk = 0;
-		    num1 = 0; 
-		    num2 = 0;
+char *response;
+
+unsigned int k = 0;
+unsigned int kk = 0;
+unsigned int num1 = 0;
+unsigned int num2 = 0;
 
 	while (s1 && s1[num1])
 		num1++;
