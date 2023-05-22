@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * init_dog - a function that initializea variable 
+* init_dog - a function that initialize variable
  * @d: pointer to poppy
  * @name: name to initialize
  * @age: age to initialize
