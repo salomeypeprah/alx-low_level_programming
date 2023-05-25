@@ -9,21 +9,21 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list num;
+	va_list var;
 	unsigned int sum = 0;
 
-	va_start(num, n);
+	va_start(var, n);
 
-	for (; sum < n; sum++)
+	for (; var < n; sum++)
 	{
-		printf("%d", va_arg(num, int));
+		printf("%d", va_arg(var, int));
 
-		if (num != (n - 1) && separator != NULL)
+		if (var != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 
 	printf("\n");
 
-	va_end(num);
+	va_end(var);
 }
 
