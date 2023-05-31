@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * muliply -a function that multiplies 2 int
- * @a: first int
- * @b: second int
+ * mul -a function that multiplies 2 int
+ * @a: first integer
+ * @b: second integer
  * Return: the results for a * b
  */
 
