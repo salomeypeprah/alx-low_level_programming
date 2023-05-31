@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 int ss;
-    int a = 0;
+int a;
 char *arr;
 if (argc != 2)
 {
@@ -24,7 +24,7 @@ printf("Error\n");
 exit(2);
 }
 arr = (char *)main;
-for (; a < ss; a++)
+for (int a = 0; a < ss; a++)
 {
 if (a == ss - 1)
 {
