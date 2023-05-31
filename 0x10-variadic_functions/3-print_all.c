@@ -2,53 +2,44 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all - a function that prints anything
- * @format: list of types of arguments passed to the function
- */
+* print_all -a function that  prints anything
+* @format: list of types of arguments passed to the function
+*/
 void print_all(const char * const format, ...)
 {
-	int var = 0;
-	char *str, *sep = "";
-
-	va_list list;
-
-va_start(list, format);
-
+int i = 0;
+char *str, *sep = "";
+va_list ti;
+va_start(ti, format);
 if (format)
 {
-while (format[var])
+while (format[i])
 {
-switch (format[var])
+switch (format[i])
 {
-	case 'c':
-printf("%s%c", sep, va_arg(list, int));
+case 'c':
+printf("%s%c", sep, va_arg(ti, int));
 break;
-
 case 'i':
-printf("%s%d", sep, va_arg(list, int));
+printf("%s%d", sep, va_arg(ti, int));
 break;
-
 case 'f':
-printf("%s%f", sep, va_arg(list, double));
+printf("%s%f", sep, va_arg(ti, double));
 break;
-
 case 's':
-str = va_arg(list, char *);
+str = va_arg(ti, char *);
 if (!str)
 str = "(nil)";
-	printf("%s%s", sep, str);
-
+printf("%s%s", sep, str);
 break;
 default:
-var++;
+i++;
 continue;
 }
 sep = ", ";
-var++;
+i++;
 }
 }
 printf("\n");
-
-va_end(list);
+va_end(ti);
 }
-
