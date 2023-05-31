@@ -11,7 +11,7 @@ int aa = 0;
 for (; aa <= 9; aa++)
 {
 if (!(aa == '2' || aa == '4'))
-_putchar('aa');
+_putchar(aa);
 }
 _putchar('\n');
 }
