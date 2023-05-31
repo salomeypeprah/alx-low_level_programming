@@ -2,28 +2,22 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_numbers - A function that prints numbers.
- * @separator: The string to be printed between numbers.
- * @n: The number of integers passed to the function.
- * @...: variables
- */
+* print_numbers - a function that  Prints numbers, followed by a new line.
+* @separator: The string to be printed between numbers.
+* @n: The number of integers passed to the function.
+* @...: A variable number of numbers to be printed.
+*/
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list var;
-	unsigned int sum = 0;
-
-	va_start(var, n);
-
-	for (; var < n; sum++)
-	{
-		printf("%d", va_arg(var, int));
-
-		if (var != (n - 1) && separator != NULL)
-			printf("%s", separator);
-	}
-
-	printf("\n");
-
-	va_end(var);
+va_list ns;
+unsigned int ind = 0;
+va_start(ns, n);
+for (; ind < n; ind++)
+{
+printf("%d", va_arg(ns, int));
+if (ind != (n - 1) && separator != NULL)
+printf("%s", separator);
 }
-
+printf("\n");
+va_end(ns);
+}
